@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-body {
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.btn {
+  border: none;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+  #password {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+  .input-label {
+    width: 80px;
+  }
+}
+
+/* Position the Popup form */
+.login-popup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  }
+  /* Hide the Popup form */
+  .form-popup {
+  display: none;
+  position: fixed;
+  left: 36%;
+  top:22%;
+  transform: translate(-45%,5%);
+  border: 2px solid #666;
+  z-index: 9;
+  opacity: 95%;
+  }
+  /* Styles for the form container */
+  .form-container {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  }
+  /* input fields */
+  .form-container input {
+  width: 60px;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  background: #eee;
+  }
+  /* When the inputs get focus, do something */
+  .form-container input:focus {
+  background-color: #ddd;
+  outline: none;
+  }
+  /* Style submit/login button */
+  .form-container .pop-btn {
+  background-color: #8ebf42;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  }
+  /* Style input box and label */
+  .form-container .input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 20px;
+  }
+  /* Style input box */
+  .form-container .input-label {
+    text-align: left;
+    font-size: 14px;
+    margin: 0 10px 0 0;
+    padding: 0;
+  }
+  /* Style checkbox group */
+  .form-container .check-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: left;
+  }
+  /* Style checkboxes */
+  .form-container .pop-check {
+    width: 20px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    opacity: 0.8;
+  }
+  /* Style checkbox labels */
+  .form-container .check-label {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-weight: 50%;
+  }
+  /* Style button group */
+  .form-container .button-container {
+    width: 100%;
+    margin-top: 15px;
+  }
+  /* Style cancel button */
+  .form-container .cancel {
+  background-color: #cc0000;
+  }
+  /* Hover effects for buttons */
+  .form-container .pop-btn:hover, .open-button:hover {
+  opacity: 1;
+  }
